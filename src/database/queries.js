@@ -38,18 +38,17 @@ const findByProducts = `SELECT * FROM productos WHERE producto_id  = ? ; `
 
 const createNewCategoryQuery = `INSERT INTO  categorias VALUES (null, ?);   `;
 
+
+const getCandidatos = `SELECT * FROM candidatos;  `;
+const votarPorCandidato = `INSERT INTO votos VALUES (null, ?, ?, NOW())  `;
+
 module.exports = {
     createDB,
     dropDB,
     createTableUSers,
     createNewUser,
     findUserByEmailQuery,
-    // findByUsernameQuery,
-    // createNewCategory,
-    // findCategoryById,
-    // allCategory,
-    // deleteCategory,
-    // allProducts,
-    // findByProducts
+    getCandidatos,
+    votarPorCandidato
 };
 

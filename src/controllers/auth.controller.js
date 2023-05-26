@@ -57,7 +57,8 @@ exports.signin = (req, res) => {
                     data: {
                         token,
                         username: data.nombre_usuario,
-                        email: data.correo_electronico
+                        email: data.correo_electronico,
+                        id: data.id_usuario
                     }
                 });
                 return;
